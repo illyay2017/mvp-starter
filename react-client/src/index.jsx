@@ -12,8 +12,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log('Trying to run this!');
     $.ajax({
-      url: '/items', 
+      url: '/items',
+      contentType: 'application/json',
       success: (data) => {
         this.setState({
           items: data

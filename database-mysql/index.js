@@ -2,10 +2,12 @@ var mysql = require('mysql');
 
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : 'FILL_ME_IN',
+  user     : 'illyayanchuk',
+  // password : 'Married2017!',
   database : 'test'
 });
+
+connection.connect();
 
 var selectAll = function(callback) {
   connection.query('SELECT * FROM items', function(err, results, fields) {
